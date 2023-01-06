@@ -1,0 +1,6 @@
+-   k3s
+-   kubectl from macos -> k3s
+-   deploy simple app
+-   ingres
+-   TLS
+-   API Gateway?

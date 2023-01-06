@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: app-01
+    labels:
+        app: app-01
+spec:
+    selector:
+        matchLabels:
+            app: app-01
+    replicas: 2
+    strategy:
+        type: RollingUpdate
+    template:
+        metadata:
+            labels:
+                app: app-01
+        spec:
+            containers:
+                - name: app-01
+                  image: yeasy/simple-web
+                  ports:
+                      - containerPort: 80
